@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Link from 'next/link';
 
 
-function Index({ page }) {
+function Page({ page }) {
   return page ? (
     <div>
       {page.title}
@@ -57,4 +57,4 @@ export async function getStaticPaths() {
   return { paths, fallback: 'blocking' }
 }
 
-export default Index
+export default Page
