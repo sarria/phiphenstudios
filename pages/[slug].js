@@ -1,33 +1,29 @@
-import Head from 'next/head'
+import queryPaths from '../query/paths'
+import queryContent from '../query/content'
+import NotFound from '../components/404'
+import PageContent from '../components/PageContent'
+
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
+// import Link from 'next/link';
 
-import Link from 'next/link';
-
-
-function Page({ page }) {
-  return page ? (
-    <div>
-      {page.title}
-      {/* <div>{page.content_blocks.headerImage.small}</div> */}
-
-    </div>    
-  ) : <div>404 Not found</div>
+function Page({ global, page }) {
+  return page ? <PageContent page={page} navigation={global.burgerNavigation} /> : <NotFound page={page} navigation={navigation} />
 }
 
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps(context) {
-  const slug = context.params.slug
-  const queryStr = 'http://phiphenstudios.everlivesolutions.com/graphql?query=query getPageContent { pages(where: {name: "' + slug + '"}) { edges { node { pageId slug title content_blocks { headerImage { altText small: sourceUrl(size: SMALL) max: sourceUrl(size: MAX) } modules { moduleType label text break images { image { altText full: sourceUrl(size: FULL) small: sourceUrl(size: SMALL) half: sourceUrl(size: HALF) } } imageText { image { altText small: sourceUrl(size: SMALL) half: sourceUrl(size: HALF) } text } } } } } } }'
-  const res = await fetch(queryStr)
+  const res = await fetch(process.env.API + queryContent(context.params.slug))
   const data = await res.json()
-  const page = data.data?.pages?.edges[0]?.node
+  const global = data.data?.acfOptionsGlobalOptions?.global
+  const content = data.data?.content?.edges[0]?.node
 
   return {
     props: {
-      page: typeof page === 'undefined' ? null : page
+      global,
+      page: typeof content === 'undefined' ? null : content
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
@@ -40,7 +36,7 @@ export async function getStaticProps(context) {
 // It may be called again, on a serverless function, if
 // the path has not been generated.
 export async function getStaticPaths() {
-  const res = await fetch('http://phiphenstudios.everlivesolutions.com/graphql?query=query getPages {pages{edges{node{pageId slug title}}}}')
+  const res = await fetch(process.env.API + queryPaths())
   const data = await res.json()
 
   // Get the paths we want to pre-render based on data

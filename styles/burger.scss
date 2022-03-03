@@ -1,0 +1,85 @@
+@import '../styles/breakpoints.scss';
+@import '../styles/variables.scss';
+
+#toggle {
+	display: none;
+}
+
+/**
+Hamburger
+**/
+.hamburger {
+	margin: $hero-margin;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.hamburger div {
+	position: relative;
+	width: 3em;
+	height: 7px;
+	border-radius: 3px;
+	background-color: #FFF;
+	margin-top: 8px;
+	/* transition: all 0.3s ease-in-out; */
+}
+
+/**
+Nav Styles
+**/
+.nav {
+	position: absolute;
+	display: none;
+	background-color: #b08103;
+	overflow: hidden;
+	/* transition: all 1s ease-in-out; */
+	z-index: 9;
+	opacity: 0;
+	padding: 145px 0 0 64px;
+	color: #FFF;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding-bottom: 30px;
+	width: 90%;
+
+	@include sm {
+		width: 400px;
+  	}	
+
+}
+
+.nav a {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	padding-bottom: 20px;;
+	font-weight: lighter;
+}
+
+.nav a:active,
+.nav a:hover {
+	font-weight:400
+}
+
+/**
+Animations
+**/
+#toggle:checked + .hamburger .topBun {
+	transform: rotate(-45deg);
+	margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottomBun {
+	opacity: 0;
+	transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+	transform: rotate(45deg);
+	margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+	display: block;
+	top: 0;
+	opacity: 1;
+}

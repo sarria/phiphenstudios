@@ -1,0 +1,26 @@
+@import '../styles/breakpoints.scss';
+@import '../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+	padding-top: $hero-margin;
+}
+
+.wrapper {
+	margin: 0;
+	padding: 0 $hero-margin;
+	text-align: center;
+
+	@include md {
+		text-align: left;
+  	}	
+
+	@include lg {
+		width: 80%;
+		margin: 0 auto;
+		font-size: 18px;
+		padding: 0px;
+	}
+
+}
