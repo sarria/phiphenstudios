@@ -5,12 +5,16 @@
 	position: relative;
 	width: 100%;
 	padding-top: $HERO-MARGIN;
+	font-weight: 600;
+	letter-spacing: 4px;
 }
 
 .wrapper {
 	margin: 0;
 	padding: 0 $HERO-MARGIN;
 	text-align: center;
+	font-size: 30px;
+	color: $HEADER-COLOR;
 
 	@include md {
 		text-align: left;
@@ -19,7 +23,6 @@
 	@include lg {
 		width: 80%;
 		margin: 0 auto;
-		font-size: 18px;
 		padding: 0px;
 	}
 

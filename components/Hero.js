@@ -33,10 +33,8 @@ function Hero({title, headerImage, navigation}) {
 						<div className={styles.burger}>
 							<Burger navigation={navigation} />
 						</div>
-						<div className={styles.title_wraper}>
-							<div>
-								{title}
-							</div>
+						<div className={styles.title}>
+							{title}
 						</div>						
 					</div>
 					

@@ -2,6 +2,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Hero from './Hero'
 import Text from './Text'
+import Label from './Label'
 
 function PageContent({navigation, page}) {
 	console.log('page data', page)
@@ -20,7 +21,7 @@ function PageContent({navigation, page}) {
 						ele = <Text data={module} />
 						break;
 					case 'label':
-						// code block
+						ele = <Label data={module} />
 						break;
 					default:
 						// code block
