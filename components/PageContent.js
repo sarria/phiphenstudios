@@ -3,6 +3,7 @@ import Footer from './Footer'
 import Hero from './Hero'
 import Text from './Text'
 import Label from './Label'
+import Image_text from './Image_text'
 
 function PageContent({navigation, page}) {
 	console.log('page data', page)
@@ -23,6 +24,9 @@ function PageContent({navigation, page}) {
 					case 'label':
 						ele = <Label data={module} />
 						break;
+					case 'image_text':
+						ele = <Image_text data={module.imageText} />
+						break;						
 					default:
 						// code block
 				}

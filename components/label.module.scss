@@ -4,17 +4,18 @@
 .root {
 	position: relative;
 	width: 100%;
-	padding-top: $HERO-MARGIN;
+	padding-top: $GLOBAL-MARGIN;
 	font-weight: 600;
 	letter-spacing: 4px;
 }
 
 .wrapper {
 	margin: 0;
-	padding: 0 $HERO-MARGIN;
+	padding: 0 $GLOBAL-MARGIN;
 	text-align: center;
 	font-size: 30px;
-	color: $HEADER-COLOR;
+	max-width: 1366px;
+	color: $GOLDEN-COLOR;
 
 	@include md {
 		text-align: left;

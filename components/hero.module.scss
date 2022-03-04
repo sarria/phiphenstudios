@@ -18,24 +18,28 @@
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
+	max-width: 1366px;
 	height: 100%;
-	// background-color: #000;
+	background-color: #000;
 
 	@include sm {
-	  	// background-color:red;
+	  	background-color:red;
 	}
 	@include md {
-		// background-color:blue;
+		background-color:blue;
 	}
 	@include lg {
-		// background-color:yellow;
+		background-color:yellow;
 		width: 80%;
 	}
 	@include xl {
-		// background-color:blueviolet;
+		background-color:blueviolet;
     }
 	@include xxl {
-		// background-color:rgb(43, 226, 119);
+		background-color:rgb(43, 226, 119);
+	}
+	@include xxxl {
+		background-color:purple
 	}
 }
 
@@ -57,8 +61,8 @@
 	position: absolute;
 	top: 0px;
 	width: 200px;
-	margin-top: $HERO-MARGIN;
-	padding-left: $HERO-MARGIN;
+	margin-top: $GLOBAL-MARGIN;
+	padding-left: $GLOBAL-MARGIN;
 	z-index: 9;
 	cursor: pointer;
 
@@ -78,7 +82,7 @@
 	font-weight: bold;
 	letter-spacing: 5px;
 	text-transform: uppercase;
-	padding-left: $HERO-MARGIN;
+	padding-left: $GLOBAL-MARGIN;
 	width: 80%;
 	display: flex;
 	justify-content: center;	

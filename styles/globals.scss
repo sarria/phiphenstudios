@@ -7,13 +7,56 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 	font-size: 18px;
-	color: #00020a;
+	color: $FONT-COLOR;
 	font-weight: lighter;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $HEADER-COLOR;
+  color: $GOLDEN-COLOR;
   font-weight: lighter;
   font-size: 20px;
+}
+
+ul, li {
+  padding-left: 17px;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+li::marker {
+  color: $GOLDEN-COLOR;
+}
+
+.hide {
+  display: none !important;
+}
+
+.square_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+  
+.square {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+
+.ratio_container .outer {
+  width: 100%;
+  padding-top: 100%; /* defines aspect ratio */
+  position: relative;
+}
+.ratio_container .outer .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

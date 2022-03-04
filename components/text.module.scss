@@ -4,13 +4,14 @@
 .root {
 	position: relative;
 	width: 100%;
-	padding-top: $HERO-MARGIN;
+	margin-top: $GLOBAL-MARGIN;
 }
 
 .wrapper {
 	margin: 0;
-	padding: 0 $HERO-MARGIN;
+	padding: 0 $GLOBAL-MARGIN;
 	text-align: center;
+	max-width: 1366px;
 
 	@include md {
 		text-align: left;
