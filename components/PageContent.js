@@ -6,6 +6,7 @@ import Label from './Label'
 import Image_text from './Image_text'
 import Images from './Images'
 import Carousel from './Carousel'
+import Announcements from './Announcements'
 
 function PageContent({navigation, page}) {
 	console.log('page data', page)
@@ -37,6 +38,9 @@ function PageContent({navigation, page}) {
 					case 'carousel':
 						ele = <Carousel data={module} navigation={navigation} />
 						break;
+					case 'announcements':
+						ele = <Announcements data={module} />
+						break;						
 					default:
 						// code block
 				}

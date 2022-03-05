@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+	margin-top: $GLOBAL-MARGIN;
+}
+
+.wrapper {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100px;
+
+	@include sm {
+		padding: 0 $GLOBAL-MARGIN;
+  	}	
+
+	@include lg {
+		width: 80%;
+		margin: 0 auto;
+		font-size: 18px;
+		padding: 0px;
+	}
+
+	&.qty_1 {
+		background-color: $COLOR_A;
+
+		.image {
+			width: 100%;
+
+			@include sm {
+				width: 100%;
+
+				.image_ratio {
+					padding-top: 25%;
+				}
+			}
+		}
+
+	}
+
+	&.qty_2 {
+		background-color: $COLOR_B;
+
+		.image {
+			width: 100%;
+
+			@include sm {
+				width: 50%;
+
+				.image_ratio {
+					padding-top: 50%;
+				}
+			}
+		}
+
+	}
+
+	&.qty_3 {
+		background-color: $COLOR_C;
+		flex-direction: column;
+
+		.image {
+			width: 100%;
+
+			@include sm {
+				width: 33.33%;
+
+				.image_ratio {
+					padding-top: 100%;
+				}
+			}
+		}
+
+		@include sm {
+			flex-direction: row;
+		}
+	}
+
+}
