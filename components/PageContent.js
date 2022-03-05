@@ -35,7 +35,7 @@ function PageContent({navigation, page}) {
 						ele = <Images data={module} />
 						break;
 					case 'carousel':
-						ele = <Carousel carousel={module.carousel} navigation={navigation} />
+						ele = <Carousel data={module} navigation={navigation} />
 						break;
 					default:
 						// code block

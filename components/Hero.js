@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import Burger from './burger'
+import Burger from './Burger'
+import Quote from "./Quote"
+import parse from 'html-react-parser';
 import Link from 'next/link'
 import classNames from 'classnames/bind'
 import styles from './styles/hero.module.scss'
@@ -7,7 +9,9 @@ import logo from '../public/PSLogo.png'
 import decoration from '../public/decoration.png'
 import SimpleImageSlider from "react-simple-image-slider"; // https://www.npmjs.com/package/react-simple-image-slider
 
-function Hero({carousel, title, headerImage, navigation}) {
+function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
+
+	console.log('quote',quote)
 
 	const cx = classNames.bind(styles);
 
@@ -28,14 +32,17 @@ function Hero({carousel, title, headerImage, navigation}) {
 					/>
 				}
 				{carousel && 
+					
 					<div className={styles.carousel}>
 						<SimpleImageSlider
 							height={546}
 							images={images}
 							showBullets={true}
 							showNavs={false}
+							loop={true}
 						/>
 					</div>
+					
 				}
 				<div className={styles.cover}>
 					<div className={styles.wrapper}>
@@ -62,6 +69,15 @@ function Hero({carousel, title, headerImage, navigation}) {
 					
 				</div>
 			</div>
+
+			{carousel && 
+			<>
+				<div className={styles.carouselMask}>
+
+				</div>
+				{quote && <Quote quote={quote} quoteAuthor={quoteAuthor} />}
+			</>}
+
 			{headerImage && 
 			<div className={styles.decoration}>
 				<Image

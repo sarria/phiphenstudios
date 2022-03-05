@@ -47,6 +47,8 @@ export default function query(slug) {
 									altText
 									sourceUrl
 								}
+								quote
+            					quoteAuthor
 							}
 						}
 						seo {

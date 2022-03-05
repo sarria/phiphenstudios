@@ -132,5 +132,18 @@ $CAROUSEL-HIGHT: 546px;
 	> div > div {
 		width: 100%;
 	}
+
+	button {
+		z-index: 999;
+		position: relative;
+	}	
+}
+
+.carouselMask {
+	position: relative;
+}
+
+.quote {
+	position: relative;
 }
 

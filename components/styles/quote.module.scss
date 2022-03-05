@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+	margin-top: $GLOBAL-MARGIN;
+	text-align: center;
+}
+
+.wrapper {
+	margin: 0;
+	padding: 0 $GLOBAL-MARGIN;
+	
+	strong,
+	strong a {
+	  color: $PURPLE-COLOR;
+	  font-weight: bold;
+	}
+
+	@include lg {
+		width: 80%;
+		margin: 0 auto;
+		font-size: 18px;
+		padding: 0px;
+	}
+
+	.quoteAuthor {
+		font-size: 11px;
+	}
+}
+

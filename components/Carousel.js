@@ -1,11 +1,9 @@
 
 import Hero from './Hero'
 
-// https://github.com/amio/re-carousel/
-
-const Carousel = ({carousel, navigation}) => {
-	console.log('Carousel', carousel, navigation)
-	return <Hero carousel={carousel} navigation={navigation} />
+const Carousel = ({data, navigation}) => {
+	console.log('Carousel data',data)
+	return <Hero carousel={data.carousel} quote={data.quote} quoteAuthor={data.quoteAuthor} navigation={navigation} />
 }
 
 export default Carousel;
