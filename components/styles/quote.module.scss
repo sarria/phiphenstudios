@@ -25,7 +25,11 @@
 	}
 
 	.quoteAuthor {
-		font-size: 11px;
+		font-size: 18px;
+
+		@include lg {
+			font-size: 11px;
+		}
 	}
 }
 

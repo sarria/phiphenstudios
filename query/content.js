@@ -49,6 +49,18 @@ export default function query(slug) {
 								}
 								quote
             					quoteAuthor
+								cards {
+									image {
+									  altText
+									  sourceUrl
+									}
+									text
+									link {
+									  target
+									  title
+									  url
+									}
+								}
 							}
 						}
 						seo {
