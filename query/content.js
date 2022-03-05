@@ -43,6 +43,10 @@ export default function query(slug) {
 									}
 									text
 								}
+								carousel {
+									altText
+									sourceUrl
+								}
 							}
 						}
 						seo {
