@@ -4,8 +4,8 @@ import cx from 'classnames';
 import styles from './styles/image_text.module.scss'
 
 const Image_text = ({data}) => {
-	console.log('layout',data.layout)
-	return (
+	
+	return data?.imageText && (
 		<div className={cx(styles.root, styles[data.layout])}>
 			<div className={styles.separator}></div>
 			{data.imageText.map((item, idx) => {

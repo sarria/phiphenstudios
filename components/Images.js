@@ -6,7 +6,7 @@ const Images = ({data}) => {
 	const images = data.images
 	console.log('Images', images);
 
-	return (
+	return data?.images && (
 		<div className={styles.root}>
 			<div className={cx(styles.wrapper, styles['qty_'+images.length])}>
 				{images.map((item, idx) => {

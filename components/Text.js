@@ -3,7 +3,7 @@ import styles from './styles/text.module.scss'
 
 const Text = ({data}) => {
 
-	return (
+	return data?.text && (
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				{parse(data.text)}
