@@ -1,5 +1,4 @@
-@import '../styles/breakpoints.scss';
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .root {
 	position: relative;
@@ -18,28 +17,28 @@
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1366px;
+	// max-width: 1366px;
 	height: 100%;
-	background-color: #000;
+	// background-color: #000;
 
 	@include sm {
-	  	background-color:red;
+	  	// background-color:red;
 	}
 	@include md {
-		background-color:blue;
+		// background-color:blue;
 	}
 	@include lg {
-		background-color:yellow;
+		// background-color:yellow;
 		width: 80%;
 	}
 	@include xl {
-		background-color:blueviolet;
+		// background-color:blueviolet;
     }
 	@include xxl {
-		background-color:rgb(43, 226, 119);
+		// background-color:greenyellow
 	}
 	@include xxxl {
-		background-color:purple
+		// background-color:purple
 	}
 }
 
@@ -76,26 +75,41 @@
 
 .title {
 	position: absolute;
-	bottom: -10px;
 	color: #FFF;
-	font-size: 30px;
+	font-size: 40px;
+	bottom: -10px;
 	font-weight: bold;
 	letter-spacing: 5px;
 	text-transform: uppercase;
-	padding-left: $GLOBAL-MARGIN;
-	width: 80%;
 	display: flex;
+	padding-left: 0;
+	width: 100%;	
 	justify-content: center;	
 
 	@include sm {
-		font-size: 40px;
 		width: auto;
 		justify-content: left;
-	}	
-	@include lg {
-		padding-left: 0px;
+		padding-left: $GLOBAL-MARGIN;		
 	}
 
+	@include lg {
+		padding-left: 0px;		
+	}
+
+	@include xl {
+		font-size: 38px;
+		bottom: -11px;		
+	}
+
+	@include xxl {
+		font-size: 44px;
+		bottom: -12px;		
+	}
+
+	@include xxxl {
+		font-size: 70px;
+		bottom: -19px;
+	}	
 }
 
 .burger {

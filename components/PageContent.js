@@ -4,6 +4,7 @@ import Hero from './Hero'
 import Text from './Text'
 import Label from './Label'
 import Image_text from './Image_text'
+import Images from './Images'
 
 function PageContent({navigation, page}) {
 	console.log('page data', page)
@@ -25,7 +26,10 @@ function PageContent({navigation, page}) {
 						ele = <Label data={module} />
 						break;
 					case 'image_text':
-						ele = <Image_text data={module.imageText} />
+						ele = <Image_text data={module} />
+						break;
+					case 'images':
+						ele = <Images data={module} />
 						break;						
 					default:
 						// code block

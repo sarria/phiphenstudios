@@ -1,21 +1,16 @@
-@import '../styles/breakpoints.scss';
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .root {
 	position: relative;
 	width: 100%;
-	padding-top: $GLOBAL-MARGIN;
-	font-weight: 600;
-	letter-spacing: 4px;
+	margin-top: $GLOBAL-MARGIN;
 }
 
 .wrapper {
 	margin: 0;
 	padding: 0 $GLOBAL-MARGIN;
 	text-align: center;
-	font-size: 30px;
-	max-width: 1366px;
-	color: $GOLDEN-COLOR;
+	// max-width: 1366px;
 
 	@include md {
 		text-align: left;
@@ -24,6 +19,7 @@
 	@include lg {
 		width: 80%;
 		margin: 0 auto;
+		font-size: 18px;
 		padding: 0px;
 	}
 

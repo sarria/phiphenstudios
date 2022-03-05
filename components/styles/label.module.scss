@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+	padding-top: $GLOBAL-MARGIN;
+	font-weight: 600;
+	letter-spacing: 5px;
+}
+
+.wrapper {
+
+	h2 {
+		font-size: 30px;
+		color: $GOLDEN-COLOR;
+		margin: 0;
+		text-align: center;
+		padding: 0;
+	
+		@include sm {
+			text-align: left;
+			padding-left: $GLOBAL-MARGIN;
+		}
+
+		@include lg {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		@include xl {
+			font-size: 30px;
+		}
+
+		@include xxl {
+			font-size: 35px;
+		}
+
+		@include xxxl {
+			font-size: 55px;
+		}
+	}
+}

@@ -1,0 +1,330 @@
+@import '../../styles/variables.scss';
+
+.root {
+	position: relative;
+	width: 100%;
+	margin-top: $GLOBAL-MARGIN;
+	// background-color: $GRAY-COLOR;
+}
+
+.wrapper {
+	margin: 0;
+	background-color: white;
+	font-size: 18px;
+
+	@include lg {
+		width: 80%;
+		margin: 0 auto;
+		padding: 0px;
+	}
+
+}
+
+.text_wrapper {
+	margin-left: $GLOBAL-MARGIN;
+
+	@include xl {
+		margin-left: calc($GLOBAL-MARGIN * 2);
+	}
+}
+
+.list {
+	.text_wrapper {
+		@include xl {
+			margin-left: calc($GLOBAL-MARGIN * 3);
+		}
+	}
+}
+
+.row_1 {
+	.text_wrapper {
+		margin-left: $GLOBAL-MARGIN;
+		margin-right: 0;
+
+		@include sm {
+			margin-left: 0;
+			margin-right: $GLOBAL-MARGIN;
+		}
+
+		@include xl {
+			margin-right: calc($GLOBAL-MARGIN * 2);
+		}		
+	}
+}
+
+.list {
+	.row_1 {
+		.text_wrapper {
+			@include sm {
+				margin-right: $GLOBAL-MARGIN * 2;
+			}
+	
+			@include xl {
+				margin-right: calc($GLOBAL-MARGIN * 3);
+			}
+		}
+	}
+}
+
+
+.image_ratio {
+	padding-top: 102% !important;
+
+	.inner {
+		background-color:$COLOR_G;
+	}
+}
+
+.list {
+	.image_ratio {
+		padding-top: 75% !important;
+	
+	}
+}
+
+.column_1 {
+	width: 10%;
+	background-color: $GRAY-COLOR;
+}
+.column_2 {
+	// width: calc(100vw - 20vw) / 3;
+	width: 26.6%;
+	background-color: $COLOR_A;
+}
+.column_3 {
+	width: 26.6%;
+	background-color: $COLOR_B;
+}
+.column_4 {
+	width: 26.6%;
+	background-color: $COLOR_C;
+}
+.column_5 {
+	width: 10%;
+}
+
+
+.ratio_container {
+	// margin-left: 0;
+	// margin-right: 0;
+
+	@include xl {
+		// margin-left: 0;
+		// margin-right: $GLOBAL-MARGIN;
+	}
+}
+
+.row_1 {
+	.ratio_container {
+		@include xl {
+			// margin-left: $GLOBAL-MARGIN;
+			// margin-right: 0;
+		}	
+	}
+}
+
+.row {
+	display: flex;	
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100%;
+
+	@include sm {
+		flex-direction: row;
+	}	
+}
+
+.list {
+	.row {
+		align-items: left;
+		// padding-bottom: calc($GLOBAL-MARGIN * 2);
+
+		@include sm {
+			align-items: center;
+		}	
+	}
+}
+
+.row_1 {
+	.row {
+		@include sm {
+			flex-direction: row-reverse;
+		}	
+	
+	}
+}
+
+.column_12 {
+	display: flex;
+	justify-content: end;
+	width: auto;
+	padding-left: 0;
+	background-color: $GRAY-COLOR;
+
+	@include sm {
+		padding-left: $GLOBAL-MARGIN;
+	}
+
+	@include lg {
+		width: 34.6%;
+		padding-left: 0;
+	}
+
+	@include xxxl {
+		// width: 725px;
+	}
+}
+
+.list {
+	.column_12 {
+		@include lg {
+			width: 50%;
+		}
+	}
+}
+
+.row_1 {
+	.column_12 {
+
+		@include sm {
+			justify-content: start;
+			padding-left: 0;
+			padding-right: $GLOBAL-MARGIN;			
+		}
+
+		@include lg {
+			padding-right: 0;
+		}
+	
+		@include xxxl {
+			// width: 738px;
+		}		
+	}
+}
+
+.column_12B {
+	width: 100vw;
+	max-width: 100vw;	
+	background-color: $COLOR_C;
+
+	@include sm {
+		width: 24.6vw; // width: 40vw;
+		// max-width: 455px;
+	}
+}
+
+.list {
+	.column_12B {
+		@include sm {
+			width: 40vw;
+		}
+	}
+}
+
+.column_34 {
+	display: flex;
+	background-image: none;
+	background-color: $GRAY-COLOR;
+	width: auto;
+	padding-right: 35px;
+
+	@include sm {
+		width: auto;
+		padding-right: 0;
+		margin-right: $GLOBAL-MARGIN;
+		background-color: transparent;
+	}
+
+	@include lg {
+		width: 55.2%;
+		margin-right: 0;
+	}
+
+	@include xxxl {
+		// width: 910.6px;
+	}
+
+	h1, h2, h3, h4, h5 {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 24px;
+	}
+
+	blockquote {
+		margin-left: 0;
+		margin-right: 0;
+		color: $GOLDEN-COLOR;
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+
+.list {
+	.column_34 {
+		
+		@include lg {
+			width: 40%;
+		}
+
+		@include xl {
+			background-image: url('../../public/subtraction-left.svg');
+			background-repeat: no-repeat;
+			background-position: center left;
+			background-position-x: $GLOBAL-MARGIN;
+		}
+	}
+
+	.row_1 {
+		.column_34 {
+			@include xl {
+				background-image: url('../../public/subtraction-right.svg');
+				background-position-x: 94%;
+			}
+		}
+	}
+	
+}
+
+
+.row_1 {
+	.column_34 {
+		@include sm {
+			margin-right: 0;
+			margin-left: $GLOBAL-MARGIN;
+		}
+	}
+}
+
+.separator {
+	width: 80%;
+	display: none;
+	border-bottom: solid 1px $GOLDEN-COLOR;
+	padding-bottom: calc($GLOBAL-MARGIN * 3);
+	margin: 0 auto calc($GLOBAL-MARGIN * 3);
+}
+
+.bio {
+	.separator {
+		display: none;
+	}
+}
+
+.bio {
+	div {
+		.separator {
+			display: block;
+		}
+	}
+	div:last-child .separator {
+		border: none;
+		margin: 0;
+	}
+}
+
+
+.list {
+	> div.separator {
+		display: block;
+		padding-bottom: $GLOBAL-MARGIN;
+	}
+}

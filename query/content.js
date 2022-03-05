@@ -29,7 +29,7 @@ export default function query(slug) {
 								moduleType
 								label
 								text
-								break
+								layout
 								images {
 									image {
 										altText

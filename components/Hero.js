@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Burger from './burger'
 import Link from 'next/link'
-import styles from './hero.module.scss'
+import styles from './styles/hero.module.scss'
 import logo from '../public/PSLogo.png'
 import decoration from '../public/decoration.png'
 
