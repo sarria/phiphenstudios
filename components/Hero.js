@@ -7,7 +7,7 @@ import decoration from '../public/decoration.png'
 
 function Hero({title, headerImage, navigation}) {
 
-	return (
+	return headerImage && (
 		<>
 			<div className={styles.root}>
 				<Image

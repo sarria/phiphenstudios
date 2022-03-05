@@ -3,9 +3,7 @@ import queryContent from '../query/content'
 import NotFound from '../components/404'
 import PageContent from '../components/PageContent'
 
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-// import Link from 'next/link';
+// https://reactjsexample.com/minimal-carousel-component-for-react/
 
 function Index({ global, page }) {
   return page ? <PageContent page={page} navigation={global.burgerNavigation} /> : <NotFound page={page} navigation={navigation} />
