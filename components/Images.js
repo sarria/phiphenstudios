@@ -11,7 +11,7 @@ const Images = ({data}) => {
 			<div className={cx(styles.wrapper, styles['qty_'+images.length])}>
 				{images.map((item, idx) => {
 
-					return (
+					return item.image && (
 					<div key={idx} className={styles.image}>
 						<div className={`ratio_container ${styles.ratio_container}`}>
 							<div className={`outer ${styles.image_ratio}`}>
