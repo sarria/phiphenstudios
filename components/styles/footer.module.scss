@@ -3,30 +3,34 @@
 .root {
 	position: relative;
 	width: 100%;
-	display: flex;
-	align-items: flex-end;
-	padding-top: calc($GLOBAL-MARGIN * 4);
-	padding-bottom: $GLOBAL-MARGIN;
+	margin-top: calc($GLOBAL-MARGIN * 4);
+	margin-bottom: $GLOBAL-MARGIN;
+	text-align: center;
 }
 
 .wrapper {
 	margin: 0;
 	padding: 0 $GLOBAL-MARGIN;
 
+	@include lg {
+		width: 80%;
+		margin: 0 auto;
+		font-size: 18px;
+		padding: 0px;
+	}
+
 	.desktop {
 		display: none;
-	
-		@include lg {
+
+		@include sm {
 			display: block;
-			width: 80%;
-			margin: 0 auto;
 		}
 	}
 
 	.mobile {
 		display: block;
-	
-		@include lg {
+
+		@include sm {
 			display: none;
 		}
 	}
