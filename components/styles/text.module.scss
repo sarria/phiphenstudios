@@ -9,12 +9,8 @@
 .wrapper {
 	margin: 0;
 	padding: 0 $GLOBAL-MARGIN;
-	text-align: center;
 	// max-width: 1366px;
 
-	@include md {
-		text-align: left;
-  	}	
 
 	@include lg {
 		width: 80%;
