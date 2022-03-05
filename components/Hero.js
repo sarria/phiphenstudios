@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Burger from './Burger'
+import Burger from './burger'
 import Quote from "./Quote"
-import parse from 'html-react-parser';
+// import parse from 'html-react-parser';
 import Link from 'next/link'
 import classNames from 'classnames/bind'
 import styles from './styles/hero.module.scss'
