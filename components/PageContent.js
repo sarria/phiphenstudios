@@ -14,7 +14,9 @@ function PageContent({navigation, page}) {
 		<>
 			<Header seo={page.seo} />
 
-			<Hero title={page.title} headerImage={page.content_blocks.headerImage} navigation={navigation}  />
+			{page.slug !== 'home-page' && 
+				<Hero title={page.title} headerImage={page.content_blocks.headerImage} navigation={navigation}  />
+			}
 
 			{page.content_blocks.modules && page.content_blocks.modules.map((module, idx) => {
 				let ele = <>{module.moduleType}</>
@@ -33,7 +35,7 @@ function PageContent({navigation, page}) {
 						ele = <Images data={module} />
 						break;
 					case 'carousel':
-						ele = <Carousel data={module} />
+						ele = <Carousel carousel={module.carousel} navigation={navigation} />
 						break;
 					default:
 						// code block

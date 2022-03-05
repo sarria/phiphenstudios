@@ -1,22 +1,42 @@
 import Image from 'next/image'
 import Burger from './burger'
 import Link from 'next/link'
+import classNames from 'classnames/bind'
 import styles from './styles/hero.module.scss'
 import logo from '../public/PSLogo.png'
 import decoration from '../public/decoration.png'
+import SimpleImageSlider from "react-simple-image-slider"; // https://www.npmjs.com/package/react-simple-image-slider
 
-function Hero({title, headerImage, navigation}) {
+function Hero({carousel, title, headerImage, navigation}) {
 
-	return headerImage && (
+	const cx = classNames.bind(styles);
+
+	const images = !carousel ? [] : carousel.map(image => {
+		return { url: image.sourceUrl }
+	})
+
+	return (
 		<>
-			<div className={styles.root}>
-				<Image
-					alt={headerImage.altText}
-					src={headerImage.sourceUrl}
-					layout="fill"
-					objectFit="cover"
-					objectPosition="bottom center"
-				/>
+			<div className={cx(styles.root, {isCarousel: carousel})}>
+				{headerImage && 
+					<Image
+						alt={headerImage.altText}
+						src={headerImage.sourceUrl}
+						layout="fill"
+						objectFit="cover"
+						objectPosition="bottom center"
+					/>
+				}
+				{carousel && 
+					<div className={styles.carousel}>
+						<SimpleImageSlider
+							height={546}
+							images={images}
+							showBullets={true}
+							showNavs={false}
+						/>
+					</div>
+				}
 				<div className={styles.cover}>
 					<div className={styles.wrapper}>
 						<div className={styles.logo}>
@@ -33,13 +53,16 @@ function Hero({title, headerImage, navigation}) {
 						<div className={styles.burger}>
 							<Burger navigation={navigation} />
 						</div>
-						<div className={styles.title}>
-							{title}
-						</div>						
+						{title && 
+							<div className={styles.title}>
+								{title}
+							</div>
+						}					
 					</div>
 					
 				</div>
 			</div>
+			{headerImage && 
 			<div className={styles.decoration}>
 				<Image
 					alt="Phiphen Studios"
@@ -47,7 +70,7 @@ function Hero({title, headerImage, navigation}) {
 					
 				/>
 			</div>
-			
+			}
 		</>
 	)
 }

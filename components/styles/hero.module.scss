@@ -1,9 +1,12 @@
 @import '../../styles/variables.scss';
 
+$HERO-HEIGHT: 375px;
+$CAROUSEL-HIGHT: 546px;
+
 .root {
 	position: relative;
 	width: 100%;
-	height: 375px;
+	height: $HERO-HEIGHT;
 }
 
 .cover {
@@ -117,3 +120,17 @@
 	justify-content: end;		
 	// background-color: burlywood;
 }
+
+.isCarousel {
+	height: $CAROUSEL-HIGHT;
+}
+
+.carousel {
+	position: absolute;
+	width: 100%;
+
+	> div > div {
+		width: 100%;
+	}
+}
+
