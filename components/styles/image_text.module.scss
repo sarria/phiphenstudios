@@ -162,8 +162,6 @@
 }
 
 .column_12 {
-	display: flex;
-	justify-content: end;
 	width: auto;
 	padding-left: 0;
 	background-color: $GRAY-COLOR;
@@ -213,10 +211,22 @@
 	width: 100vw;
 	max-width: 100vw;	
 	background-color: $COLOR_C;
+	padding-left: 0;
 
 	@include sm {
-		width: 24.6vw; // width: 40vw;
-		// max-width: 455px;
+		width: 24.6vw;
+	}
+
+	@include lg {
+		padding-left: calc(34.6vw - 24.6vw);		
+	}
+}
+
+.row_1 {
+	.column_12B {
+		@include lg {
+			padding-left: 0;
+		}
 	}
 }
 
