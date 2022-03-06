@@ -12,7 +12,8 @@
 	padding: 0 $GLOBAL-MARGIN;
 	
 	strong,
-	strong a {
+	strong a,
+	a strong {
 	  color: $PURPLE-COLOR;
 	  font-weight: bold;
 	}
