@@ -18,7 +18,7 @@ const Burger = ({navigation}) => {
 
 			<div className="nav">
 				{navigation.map((item) => (
-					<Link key={item.page.slug} href={"/" + item.page.slug}>
+					<Link key={item.page.slug} href={"/" + (item.page.slug === 'home-page' ? '' : item.page.slug)}>
 						<a onClick={handleClick}>{item.page.title}</a>
 					</Link>
 				))}
