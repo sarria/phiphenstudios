@@ -17,7 +17,7 @@ const Video = ({data}) => {
 						url={data.videoUrl} 
 						width='100%'
 						height='100%'
-						light='http://phiphenstudios.everlivesolutions.com/wp-content/uploads/2022/03/video-cover.png'
+						light={true}
 					/>
 				</div>
 			</div>
