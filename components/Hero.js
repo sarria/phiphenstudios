@@ -108,19 +108,7 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 			</div>
 			}
 
-			<AliceCarousel
-				items={galleryItems}
-				responsive={{
-					0: { items: 1 },
-					1024: { items: 2 },
-				  }}
-				autoPlayInterval={2000}
-				autoPlayDirection="rtl"
-				autoPlay={true}
-				fadeOutAnimation={true}
-				mouseTrackingEnabled={true}
-				disableAutoPlayOnAction={true}
-			/>
+			
 		</>
 	)
 }
