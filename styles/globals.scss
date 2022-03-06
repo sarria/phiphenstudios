@@ -85,6 +85,10 @@ li::marker {
   background-position: center;
 }
 
+/*
+<div style={{"--aspect-ratio":16/9}} className={styles.box}></div>
+*/
+
 [style*="--aspect-ratio"] > :first-child {
   width: 100%;
 }

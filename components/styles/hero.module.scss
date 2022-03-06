@@ -1,8 +1,5 @@
 @import '../../styles/variables.scss';
 
-$HERO-HEIGHT: 375px;
-$CAROUSEL-HIGHT: 546px;
-
 .root {
 	position: relative;
 	width: 100%;
@@ -112,6 +109,7 @@ $CAROUSEL-HIGHT: 546px;
 
 .isCarousel {
 	height: $CAROUSEL-HIGHT;
+	overflow: hidden;
 }
 
 .carousel {
@@ -157,3 +155,8 @@ $CAROUSEL-HIGHT: 546px;
 	position: relative;
 }
 
+.heroWrapper {
+	position: relative;
+	width: 100%;
+	height: $HERO-HEIGHT;
+}

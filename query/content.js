@@ -46,6 +46,10 @@ export default function query(slug) {
 								carousel {
 									altText
 									sourceUrl
+									mediaDetails {
+										width
+										height
+									}
 								}
 								quote
             					quoteAuthor
