@@ -26,13 +26,13 @@ $CAROUSEL-HIGHT: 546px;
 		width: 80%;
 	}
 
-	// background-color: #000;
-	// @include sm {background-color:red;}
-	// @include md {background-color:blue;}
-	// @include lg {background-color:yellow;}
-	// @include xl {background-color:blueviolet;}
-	// @include xxl {background-color:greenyellow;}
-	// @include xxxl {background-color:purple;}
+	background-color: #000;
+	@include sm {background-color:red;}
+	@include md {background-color:blue;}
+	@include lg {background-color:yellow;}
+	@include xl {background-color:blueviolet;}
+	@include xxl {background-color:greenyellow;}
+	@include xxxl {background-color:purple;}
 }
 
 .decoration {
@@ -106,8 +106,6 @@ $CAROUSEL-HIGHT: 546px;
 }
 
 .burger {
-	display: flex;
-	justify-content: end;
 	width: 100%;
 	// background-color: burlywood;
 }

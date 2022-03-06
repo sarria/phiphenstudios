@@ -12,6 +12,12 @@ Hamburger
 	margin: $GLOBAL-MARGIN;
 	cursor: pointer;
 	z-index: 10;
+	position: absolute;
+	right: 0;
+
+	@include lg {
+		right: calc(10% + $GLOBAL-MARGIN);
+	}
 }
 
 .hamburger div {
@@ -42,11 +48,15 @@ Nav Styles
 	letter-spacing: 3px;
 	padding-bottom: 30px;
 	width: 90%;
+	right: 0;
 
 	@include sm {
 		width: 400px;
   	}	
 
+	@include lg {
+		right: 10%;
+	}
 }
 
 .nav a {
