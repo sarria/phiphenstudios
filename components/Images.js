@@ -4,7 +4,6 @@ import styles from './styles/images.module.scss'
 
 const Images = ({data}) => {
 	const images = data.images
-	console.log('Images', images);
 
 	return data?.images && (
 		<div className={styles.root}>

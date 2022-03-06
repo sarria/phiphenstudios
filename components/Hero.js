@@ -10,9 +10,6 @@ import decoration from '../public/decoration.png'
 import SimpleImageSlider from "react-simple-image-slider"; // https://www.npmjs.com/package/react-simple-image-slider
 
 function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
-
-	console.log('quote',quote)
-
 	const cx = classNames.bind(styles);
 
 	const images = !carousel ? [] : carousel.map(image => {

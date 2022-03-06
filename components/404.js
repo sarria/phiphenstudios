@@ -1,9 +1,10 @@
 function NotFound() {
 	return (
 		<center>
-			<h1>404</h1>
+			<h1 style={{fontSize: '50px'}}><b>404</b></h1>
 			<div>Ops!</div>
-			<b>Where are you trying to go?</b>
+			<div><b>Where are you trying to go?</b></div><br/>
+			<div><strong><a href="\">Click here</a> to go to the home page</strong></div>
 		</center>
 	)
 }

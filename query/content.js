@@ -55,12 +55,8 @@ export default function query(slug) {
 									  sourceUrl
 									}
 									text
-									link {
-									  target
-									  title
-									  url
-									}
 								}
+								videoUrl
 							}
 						}
 						seo {

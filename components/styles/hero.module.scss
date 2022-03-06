@@ -20,29 +20,19 @@ $CAROUSEL-HIGHT: 546px;
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	// max-width: 1366px;
 	height: 100%;
-	// background-color: #000;
 
-	@include sm {
-	  	// background-color:red;
-	}
-	@include md {
-		// background-color:blue;
-	}
 	@include lg {
-		// background-color:yellow;
 		width: 80%;
 	}
-	@include xl {
-		// background-color:blueviolet;
-    }
-	@include xxl {
-		// background-color:greenyellow
-	}
-	@include xxxl {
-		// background-color:purple
-	}
+
+	// background-color: #000;
+	// @include sm {background-color:red;}
+	// @include md {background-color:blue;}
+	// @include lg {background-color:yellow;}
+	// @include xl {background-color:blueviolet;}
+	// @include xxl {background-color:greenyellow;}
+	// @include xxxl {background-color:purple;}
 }
 
 .decoration {

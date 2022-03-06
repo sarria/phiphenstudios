@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Burger = ({navigation}) => {
-	console.log('navigation', navigation)
+	
 	return (
 		<>
 			<input id="toggle" type="checkbox"></input>

@@ -4,7 +4,7 @@ import NotFound from '../components/404'
 import PageContent from '../components/PageContent'
 
 function Page({ global, page }) {
-  return page ? <PageContent page={page} navigation={global.burgerNavigation} /> : <NotFound page={page} navigation={navigation} />
+  return page ? <PageContent page={page} navigation={global.burgerNavigation} /> : <NotFound page={page} />
 }
 
 // This function gets called at build time on server-side.

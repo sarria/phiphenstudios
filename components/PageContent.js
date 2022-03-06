@@ -7,9 +7,9 @@ import Image_text from './Image_text'
 import Images from './Images'
 import Carousel from './Carousel'
 import Announcements from './Announcements'
+import Video from './Video'
 
 function PageContent({navigation, page}) {
-	console.log('page data', page)
 	
 	return page ? (
 		<>
@@ -40,7 +40,10 @@ function PageContent({navigation, page}) {
 						break;
 					case 'announcements':
 						ele = <Announcements data={module} />
-						break;						
+						break;
+					case 'video':
+						ele = <Video data={module} />
+						break;			
 					default:
 						// code block
 				}

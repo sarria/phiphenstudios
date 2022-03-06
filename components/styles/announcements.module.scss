@@ -30,5 +30,82 @@
 		text-transform: uppercase;
 		color: $LIGHT-PURPLE-COLOR;
 		letter-spacing: 10px;
+		padding: $GLOBAL-MARGIN 0;
+	}
+
+	.cards {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: calc($GLOBAL-MARGIN * 2);
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 0;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		@include lg {
+			flex-direction: row;
+		}
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		background-color: $GRAY-COLOR;
+		margin-bottom: $GLOBAL-MARGIN;
+		width: 100%;
+		
+		@include sm {
+			flex-direction: row;
+		}
+
+		@include lg {
+			width: 50%;
+			margin-bottom: 0;
+		}
+
+		.image {
+			width: 100%;
+
+			@include sm {
+				width: 50%;
+			}
+
+			.image_ratio {
+				padding-top: 60%;
+
+				@include lg {
+					padding-top: 100%;
+				}
+
+			}
+
+		}
+
+		.text {
+			width: auto;
+			padding: 23px 25px 18px 25px;
+
+			p {
+				font-weight: normal;
+				line-height: 22px;
+			}
+
+			a {
+				font-size: 14px;
+				text-decoration: none;
+				color: $GOLDEN-COLOR;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			@include sm {
+				width: 50%;
+			}
+
+		}
 	}
 }
