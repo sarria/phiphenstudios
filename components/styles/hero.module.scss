@@ -130,7 +130,28 @@ $CAROUSEL-HIGHT: 546px;
 }
 
 .carouselMask {
-	position: relative;
+	display: none;
+
+	@include md {
+		display: block;
+		position: absolute;
+		top: 425px;
+		left: 10%;
+	}
+}
+
+.carouselMaskExt {
+	display: none;
+
+	@include md {
+		display: block;
+		position: absolute;
+		background-color: white;
+		width: calc((100% - 80%)/2);
+		height: 115px;
+		top: 484px;
+		z-index: 9999;
+	}
 }
 
 .quote {

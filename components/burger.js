@@ -2,6 +2,10 @@ import Link from 'next/link'
 
 const Burger = ({navigation}) => {
 	
+	const handleClick = () => {
+		document.getElementById('toggle').checked = false;
+	}
+
 	return (
 		<>
 			<input id="toggle" type="checkbox"></input>
@@ -15,7 +19,7 @@ const Burger = ({navigation}) => {
 			<div className="nav">
 				{navigation.map((item) => (
 					<Link key={item.page.slug} href={"/" + item.page.slug}>
-						<a>{item.page.title}</a>
+						<a onClick={handleClick}>{item.page.title}</a>
 					</Link>
 				))}
 			</div>

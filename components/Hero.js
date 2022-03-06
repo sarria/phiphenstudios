@@ -7,6 +7,7 @@ import classNames from 'classnames/bind'
 import styles from './styles/hero.module.scss'
 import logo from '../public/PSLogo.png'
 import decoration from '../public/decoration.png'
+import mask from '../public/mask.png'
 import SimpleImageSlider from "react-simple-image-slider"; // https://www.npmjs.com/package/react-simple-image-slider
 
 function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
@@ -70,8 +71,12 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 			{carousel && 
 			<>
 				<div className={styles.carouselMask}>
-
+					<Image 
+						alt=''
+						src={mask} 
+					/>
 				</div>
+				<div className={styles.carouselMaskExt}></div>
 				{quote && <Quote quote={quote} quoteAuthor={quoteAuthor} />}
 			</>}
 
