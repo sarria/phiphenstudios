@@ -8,13 +8,31 @@ import styles from './styles/hero.module.scss'
 import logo from '../public/PSLogo.png'
 import decoration from '../public/decoration.png'
 import mask from '../public/mask.png'
-import SimpleImageSlider from "react-simple-image-slider"; // https://www.npmjs.com/package/react-simple-image-slider
+import SimpleImageSlider from "react-simple-image-slider"; 
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+
+// https://www.npmjs.com/package/react-simple-image-slider
 
 function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 	const cx = classNames.bind(styles);
 
 	const images = !carousel ? [] : carousel.map(image => {
 		return { url: image.sourceUrl }
+	})
+
+	const galleryItems = !carousel ? [] : carousel.map((image,idx) => {
+		return (
+					
+			<Image
+				key={idx}
+				alt=""
+				src={image.sourceUrl}
+				layout="responsive"
+				width="500"
+				height="500"
+			/>	
+		)
 	})
 
 	return (
@@ -89,6 +107,20 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 				/>
 			</div>
 			}
+
+			<AliceCarousel
+				items={galleryItems}
+				responsive={{
+					0: { items: 1 },
+					1024: { items: 2 },
+				  }}
+				autoPlayInterval={2000}
+				autoPlayDirection="rtl"
+				autoPlay={true}
+				fadeOutAnimation={true}
+				mouseTrackingEnabled={true}
+				disableAutoPlayOnAction={true}
+			/>
 		</>
 	)
 }
