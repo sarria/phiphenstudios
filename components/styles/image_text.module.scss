@@ -22,6 +22,11 @@
 
 .text_wrapper {
 	margin-left: $GLOBAL-MARGIN;
+	text-align: center;
+
+	@include sm {
+		text-align: left;		
+	}	
 
 	@include xl {
 		margin-left: calc($GLOBAL-MARGIN * 2);
@@ -30,8 +35,10 @@
 
 .list {
 	.text_wrapper {
+		text-align: left;
+		
 		@include xl {
-			margin-left: calc($GLOBAL-MARGIN * 3);
+			margin-left: calc($GLOBAL-MARGIN * 4);
 		}
 	}
 }
@@ -60,7 +67,7 @@
 			}
 	
 			@include xl {
-				margin-right: calc($GLOBAL-MARGIN * 3);
+				margin-right: calc($GLOBAL-MARGIN * 4);
 			}
 		}
 	}
@@ -246,8 +253,12 @@
 
 	h1, h2, h3, h4, h5 {
 		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 24px;
+		font-size: 25px;
+
+		@include lg {
+			font-weight: bolder;
+			font-size: 40px;
+		}
 	}
 
 	blockquote {
@@ -261,6 +272,11 @@
 
 .list {
 	.column_34 {
+		margin-bottom: 35px;
+
+		@include sm {
+			margin-bottom: 0;
+		}
 		
 		@include lg {
 			width: 40%;

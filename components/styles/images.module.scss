@@ -13,14 +13,14 @@
 	min-height: 100px;
 
 	@include sm {
-		padding: 0 $GLOBAL-MARGIN;
+		padding: $GLOBAL-MARGIN;
   	}	
 
 	@include lg {
 		width: 80%;
 		margin: 0 auto;
 		font-size: 18px;
-		padding: 0px;
+		
 	}
 
 	&.qty_1 {
@@ -33,7 +33,7 @@
 				width: 100%;
 
 				.image_ratio {
-					padding-top: 25%;
+					padding-top: 40%;
 				}
 			}
 		}

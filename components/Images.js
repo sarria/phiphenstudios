@@ -20,6 +20,7 @@ const Images = ({data}) => {
 										src={item.image.sourceUrl}
 										layout="fill"
 										objectFit="cover"
+										objectPosition="center"
 									/>											
 								</div>
 							</div>

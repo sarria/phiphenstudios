@@ -28,11 +28,20 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $GOLDEN-COLOR;
-  font-weight: lighter;
-  font-size: 20px;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 25px;
+
+  @include lg {
+    font-weight: bolder;
+    font-size: 40px;
+  }
+
 }
 
 ul, li {
+  text-align: left;
   padding-left: 17px;
 }
 
