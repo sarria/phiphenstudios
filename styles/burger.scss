@@ -41,7 +41,7 @@ Nav Styles
 	/* transition: all 1s ease-in-out; */
 	z-index: 9;
 	opacity: 0;
-	padding: 145px 0 0 64px;
+	padding: calc($GLOBAL-MARGIN * 2.5) 0 0 64px;
 	color: #FFF;
 	font-size: 20px;
 	text-transform: uppercase;
