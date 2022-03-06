@@ -80,5 +80,31 @@
 	  display: block;
 	}
   }
+
+  .slider_btns {
+	z-index: 999;
+	position: absolute;
+	bottom: 1px;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+  }
   
-  
+.slider_btns a {
+	color: white;
+	display: inline-block;
+	margin: 0px 8px;
+	padding: 0px;
+	border: 1px solid rgb(255, 255, 255);
+	cursor: pointer;
+	outline: currentcolor none medium;
+	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+	box-shadow: rgb(26, 26, 26) 1px 1px 1px 0px;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px  
+}
+
+.slider_btns a:focus  {
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
