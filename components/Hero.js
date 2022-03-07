@@ -118,6 +118,10 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 			</div>
 			}
 
+			{!carousel && 
+				<div className={styles.topGap}></div>
+			}
+
 			
 
 		</>
