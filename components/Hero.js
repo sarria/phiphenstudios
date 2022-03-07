@@ -8,6 +8,7 @@ import styles from './styles/hero.module.scss'
 import logo from '../public/PSLogo.png'
 import decoration from '../public/decoration.png'
 import mask from '../public/mask.png'
+import Script from 'next/script'
 // import SimpleImageSlider from "react-simple-image-slider"; 
 
 function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
@@ -20,6 +21,8 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 	return (
 		<>
 			<div className={cx(styles.root, {isCarousel: carousel})}>
+				<Script src='/carousel.js' />
+
 				{headerImage && 
 					<Image
 						alt={headerImage.altText}
@@ -30,7 +33,6 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 					/>
 				}
 				{carousel && 
-					
 					<div className={styles.carousel}>
 						{/* <SimpleImageSlider
 							height={546}
@@ -57,7 +59,7 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 							</div>
 						</div>
 						
-						<div className="slider_btns">
+						<div id='slider_btns' className="slider_btns">
 							{carousel.map((image,idx) => {
 								return (
 									<Link key={idx} href={'#slide-' + idx} scroll={false}>
