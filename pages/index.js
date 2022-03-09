@@ -6,7 +6,7 @@ import PageContent from '../components/PageContent'
 // https://reactjsexample.com/minimal-carousel-component-for-react/
 
 function Index({ global, page }) {
-  return page ? <PageContent page={page} navigation={global.burgerNavigation} /> : <NotFound page={page} navigation={navigation} />
+  return page ? <PageContent page={page} global={global} /> : <NotFound page={page} />
 }
 
 // This function gets called at build time on server-side.

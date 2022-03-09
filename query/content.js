@@ -4,6 +4,11 @@ export default function query(slug) {
 		query {
 			acfOptionsGlobalOptions {
 				global {
+				  email
+				  telephone
+				  facebook
+				  twitter
+				  instagram
 				  burgerNavigation {
 					page {
 					  ... on Page {

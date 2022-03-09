@@ -9,14 +9,14 @@ import Carousel from './Carousel'
 import Announcements from './Announcements'
 import Video from './Video'
 
-function PageContent({navigation, page}) {
-	
+function PageContent({page, global}) {
+	// const {navigation} = global;
 	return page ? (
 		<>
 			<Header seo={page.seo} />
 
 			{page.slug !== 'home-page' && 
-				<Hero title={page.title} headerImage={page.content_blocks.headerImage} navigation={navigation}  />
+				<Hero title={page.title} headerImage={page.content_blocks.headerImage} navigation={global.burgerNavigation}  />
 			}
 
 			{page.content_blocks.modules && page.content_blocks.modules.map((module, idx) => {
@@ -36,7 +36,7 @@ function PageContent({navigation, page}) {
 						ele = <Images data={module} />
 						break;
 					case 'carousel':
-						ele = <Carousel data={module} navigation={navigation} />
+						ele = <Carousel data={module} navigation={global.burgerNavigation} />
 						break;
 					case 'announcements':
 						ele = <Announcements data={module} />
@@ -55,7 +55,13 @@ function PageContent({navigation, page}) {
 				)
 			})}
 
-			<Footer />
+			<Footer 
+				email={global.email} 
+				telephone={global.telephone} 
+				facebook={global.facebook} 
+				twitter={global.twitter} 
+				instagram={global.instagram} 
+			/>
 		</>		
 	) : <></>
 }

@@ -9,29 +9,88 @@
 }
 
 .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0 $GLOBAL-MARGIN;
+	
+
+	> div {
+		margin-bottom: $GLOBAL-MARGIN;
+	}
 
 	@include lg {
+		flex-direction: row;
 		width: 80%;
 		margin: 0 auto;
 		font-size: 18px;
-		padding: 0px;
+		padding: $GLOBAL-MARGIN 0px;
+
+		> div {
+			margin-bottom: 0;
+		}
+
 	}
 
-	.desktop {
-		display: none;
-
-		@include sm {
-			display: block;
-		}
+	.email a {
+		color: #b8a6bb;
+		text-decoration: none;
+		font-size: 24px;
+	}	
+	.email a:hover {
+		text-decoration: underline;
 	}
 
-	.mobile {
-		display: block;
+	.phone a {
+		color: #613877;
+		text-decoration: none;
+		font-size: 24px;
+	}	
+	.phone a:hover {
+		text-decoration: underline;
+	}
 
-		@include sm {
-			display: none;
-		}
+	.contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: $GLOBAL-MARGIN;
+		padding: 0 $GLOBAL-MARGIN;
+
+		@include xxl {
+			flex-direction: row;
+			margin-bottom: 0;
+
+			> div {
+				margin-bottom: 0
+			}
+		} 
+	}
+
+	.social {
+		display: flex;
+		flex-direction: row;
+		cursor: pointer;
+
+	}
+
+}
+
+.decoration {
+	text-align: left;
+	margin: 0;
+	background-color: $GOLDEN-COLOR;
+	position: relative;
+	height: 8px;
+	overflow: hidden;
+	
+	> span {
+		top: -8px;
+	}
+
+	@include lg {
+		margin: 0 10%;
 	}
 }

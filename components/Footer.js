@@ -1,24 +1,66 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './styles/footer.module.scss'
-import footerImgDesktop from '../public/footer.png'
-import footerImgMobile from '../public/footer-mobile.png'
+import logo from '../public/PSLogo-footer.png'
+import facebookImg from '../public/facebook.png'
+import twitterImg from '../public/twitter.png'
+import instagramImg from '../public/instagram.png'
+import decorationImg from '../public/decoration-footer.png'
 
-const Footer = () => {
+const Footer = ({email, telephone, facebook, twitter, instagram}) => {
 	return (
 		<footer className={styles.root}>
 			<div className={styles.wrapper}>
-				<div className={styles.desktop}>
+				<div className={styles.logo}>
 					<Image
 						alt=''
-						src={footerImgDesktop}
+						src={logo}
 					/>	
 				</div>
-				<div className={styles.mobile}>
-					<Image
-						alt=''
-						src={footerImgMobile}
-					/>
+				<div className={styles.contact}>
+					<div className={styles.email}>
+						<Link href={'mailto:' + email}>{email}</Link>
+					</div>
+					<div className={styles.phone}>
+						<Link href={'tel:' + telephone}>{telephone}</Link>
+					</div>
+					</div>
+				<div className={styles.social}>
+					<div className={styles.facebook}>
+						<a href={facebook} target="_blank" rel="noreferrer" >
+							<Image
+								alt=''
+								src={facebookImg}
+								
+							/>
+						</a>
+					</div>
+					<div className={styles.twitter}>
+						<a href={twitter} target="_blank" rel="noreferrer" >
+							<Image
+								alt=''
+								src={twitterImg}
+							/>
+						</a>
+					</div>
+					<div className={styles.instagram}>
+						<a href={instagram} target="_blank" rel="noreferrer" >
+							<Image
+								alt=''
+								src={instagramImg}
+							/>
+						</a>
+					</div>
 				</div>
+			</div>
+
+			<div className={styles.decoration}>
+				<Image
+					alt=''
+					src={decorationImg}
+					width={388}
+					height={8}
+				/>				
 			</div>
 		</footer>
 	)
