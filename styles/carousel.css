@@ -105,7 +105,8 @@ https://codesandbox.io/embed/nextjs-css-only-carousel-ipyij
 	box-shadow: rgb(26, 26, 26) 1px 1px 1px 0px;
 	border-radius: 50%;
 	width: 15px;
-	height: 15px  
+	height: 15px;
+	text-decoration: none;
 }
 
 .slider_btns a:focus  {

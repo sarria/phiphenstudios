@@ -63,7 +63,7 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 							{carousel.map((image,idx) => {
 								return (
 									<Link key={idx} href={'#slide-' + idx} scroll={false}>
-										<a> </a>
+										&nbsp;
 									</Link>
 								)
 							})}

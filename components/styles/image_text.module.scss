@@ -22,7 +22,7 @@
 
 .text_wrapper {
 	margin-left: $GLOBAL-MARGIN;
-	text-align: center;
+	// text-align: center;
 
 	@include sm {
 		text-align: left;		
@@ -144,16 +144,20 @@
 .list {
 	.row {
 		align-items: left;
-		// padding-bottom: calc($GLOBAL-MARGIN * 2);
+		margin-bottom: $GLOBAL-MARGIN;
+		background-color: $GRAY-COLOR;
 
 		@include sm {
+			background-color: transparent;
 			align-items: center;
+			margin-bottom: 0;
 		}	
 	}
 }
 
 .row_1 {
 	.row {
+
 		@include sm {
 			flex-direction: row-reverse;
 		}	
@@ -265,6 +269,10 @@
 		text-transform: uppercase;
 		font-size: 25px;
 
+		@include sm {
+			margin-top: 0;
+		}
+
 		@include lg {
 			font-weight: bolder;
 			font-size: 40px;
@@ -282,7 +290,7 @@
 
 .list {
 	.column_34 {
-		margin-bottom: 35px;
+		// margin-bottom: 35px;
 
 		@include sm {
 			margin-bottom: 0;
