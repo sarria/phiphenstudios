@@ -1,4 +1,3 @@
-/*
 const btns = document.getElementById('slider_btns');
 if (btns) {
 	const bullets = btns.getElementsByTagName('a');
@@ -13,4 +12,3 @@ if (btns) {
 		}
 	}, 5000);
 }
-*/
