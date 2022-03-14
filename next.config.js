@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['phiphenstudios.everlivesolutions.com'],
+    // loader: "imgix",
+    // path: 'https://everlivesolutions.imgix.net/'
   },  
 }
 

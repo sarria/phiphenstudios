@@ -21,7 +21,6 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 	return (
 		<>
 			<div className={cx(styles.root, {isCarousel: carousel})}>
-				<Script src='/carousel.js' />
 
 				{headerImage && 
 					<Image
@@ -33,6 +32,9 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 					/>
 				}
 				{carousel && 
+					<>
+					<Script src='/carousel.js' strategy="lazyOnload" />
+					
 					<div className={styles.carousel}>
 						{/* <SimpleImageSlider
 							height={546}
@@ -70,6 +72,7 @@ function Hero({title, headerImage, navigation, carousel, quote, quoteAuthor}) {
 						</div>
 
 					</div>
+					</>
 					
 				}
 				<div className={styles.cover}>
