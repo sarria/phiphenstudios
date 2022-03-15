@@ -7,9 +7,11 @@ import video_cover from '../public/video-cover.png'
 
 const Video = ({data}) => {
 
-	console.log('video', data)
+	// console.log('video', data)
 
 	return  (
+	<>
+		{data.videoUrl && 
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<div style={{"--aspect-ratio":16/9}} className={styles.box}>
@@ -21,7 +23,8 @@ const Video = ({data}) => {
 					/>
 				</div>
 			</div>
-		</div>
+		</div>}
+	</>
 	)
 }
 
