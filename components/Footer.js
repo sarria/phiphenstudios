@@ -24,8 +24,10 @@ const Footer = ({email, telephone, facebook, twitter, instagram}) => {
 					<div className={styles.phone}>
 						<Link href={'tel:' + telephone}>{telephone}</Link>
 					</div>
-					</div>
+				</div>
+				{(facebook || twitter || instagram) && 
 				<div className={styles.social}>
+					{facebook && 
 					<div className={styles.facebook}>
 						<a href={facebook} target="_blank" rel="noreferrer" >
 							<Image
@@ -34,7 +36,8 @@ const Footer = ({email, telephone, facebook, twitter, instagram}) => {
 								
 							/>
 						</a>
-					</div>
+					</div>}
+					{twitter &&
 					<div className={styles.twitter}>
 						<a href={twitter} target="_blank" rel="noreferrer" >
 							<Image
@@ -42,7 +45,8 @@ const Footer = ({email, telephone, facebook, twitter, instagram}) => {
 								src={twitterImg}
 							/>
 						</a>
-					</div>
+					</div>}
+					{instagram && 
 					<div className={styles.instagram}>
 						<a href={instagram} target="_blank" rel="noreferrer" >
 							<Image
@@ -50,8 +54,8 @@ const Footer = ({email, telephone, facebook, twitter, instagram}) => {
 								src={instagramImg}
 							/>
 						</a>
-					</div>
-				</div>
+					</div>}
+				</div>}
 			</div>
 
 			<div className={styles.decoration}>
