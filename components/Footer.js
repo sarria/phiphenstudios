@@ -18,12 +18,12 @@ const Footer = ({email, telephone, facebook, twitter, instagram}) => {
 					/>	
 				</div>
 				<div className={styles.contact}>
-					<div className={styles.email}>
+					{email && <div className={styles.email}>
 						<Link href={'mailto:' + email}>{email}</Link>
-					</div>
-					<div className={styles.phone}>
+					</div>}
+					{telephone && <div className={styles.phone}>
 						<Link href={'tel:' + telephone}>{telephone}</Link>
-					</div>
+					</div>}
 				</div>
 				{(facebook || twitter || instagram) && 
 				<div className={styles.social}>
