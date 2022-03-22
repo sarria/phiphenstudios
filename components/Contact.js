@@ -8,6 +8,7 @@ const Contact = ({data}) => {
 	const [FNAME, setFirstName] = useState("");
 	const [LNAME, setLastName] = useState("");
 	const [PHONE, setPhone] = useState("");
+	const [COMPANY, setCompany] = useState("");
 	const [addr1, setAddr1] = useState("");
 	const [city, setCity] = useState("");
 	const [state, setState] = useState("");
@@ -25,6 +26,7 @@ const Contact = ({data}) => {
 			FNAME,
 			LNAME,
 			PHONE,
+			COMPANY,
 			addr1, city, state, zip
 		});
 		setAppState("SUCCESS");
@@ -70,6 +72,18 @@ const Contact = ({data}) => {
 						/>
 					</div>
 					<div className={styles.field}>
+						<div>Company</div>
+						<input
+							className=""
+							type="text"
+							placeholder=""
+							value={COMPANY}
+							onChange={(e) => setCompany(e.target.value)}
+						/>
+					</div>
+				</div>
+				<div className={cx(styles.column, styles.right)}>
+					<div className={styles.field}>
 						<div>Phone</div>
 						<input
 							className=""
@@ -79,8 +93,6 @@ const Contact = ({data}) => {
 							onChange={(e) => setPhone(e.target.value)}
 						/>
 					</div>
-				</div>
-				<div className={cx(styles.column, styles.right)}>
 					<div className={styles.field}>
 						<div>Address</div>
 						<input
@@ -101,27 +113,29 @@ const Contact = ({data}) => {
 							onChange={(e) => setCity(e.target.value)}
 						/>
 					</div>
-					<div className={styles.field}>
-						<div>State</div>
-						<input
-							className=""
-							type="text"
-							placeholder=""
-							value={state}
-							onChange={(e) => setState(e.target.value)}
-						/>
+					<div className={styles.stateAddress}>
+						<div className={styles.field}>
+							<div>State</div>
+							<input
+								className=""
+								type="text"
+								placeholder=""
+								value={state}
+								onChange={(e) => setState(e.target.value)}
+							/>
+						</div>
+						<div className={styles.field}>
+							<div>Zip Code</div>
+							<input
+								className=""
+								type="text"
+								placeholder=""
+								value={zip}
+								onChange={(e) => setZip(e.target.value)}
+							/>
+						</div>
 					</div>
-					<div className={styles.field}>
-						<div>Zip Code</div>
-						<input
-							className=""
-							type="text"
-							placeholder=""
-							value={zip}
-							onChange={(e) => setZip(e.target.value)}
-						/>
-					</div>					
-
+					
 				</div>
 				
 			</div>

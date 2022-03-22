@@ -64,7 +64,13 @@
 		width: fit-content;
 	}
 
+	.stateAddress {
 
+		@include sm {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
 }
 
 .error {

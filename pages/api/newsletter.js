@@ -1,6 +1,6 @@
 import axios from "axios";
 
-function getRequestParams(email_address, FNAME='', LNAME='', PHONE='-', addr1='-', city='-', state='-', zip='-') {
+function getRequestParams(email_address, FNAME='', LNAME='', PHONE='-', COMPANY='-', addr1='-', city='-', state='-', zip='-') {
   // get env variables
   const API_KEY = process.env.MAILCHIMP_API_KEY;
   const LIST_ID = process.env.MAILCHIMP_LIST_ID;
@@ -20,6 +20,7 @@ function getRequestParams(email_address, FNAME='', LNAME='', PHONE='-', addr1='-
       FNAME,
       LNAME,
       PHONE,
+      COMPANY,
       "ADDRESS": {
         addr1,
         city,
@@ -44,7 +45,7 @@ function getRequestParams(email_address, FNAME='', LNAME='', PHONE='-', addr1='-
 }
 
 const Newsletter = async (req, res) => {
-  const { email_address, FNAME, LNAME, PHONE, addr1, city, state, zip } = req.body;
+  const { email_address, FNAME, LNAME, PHONE, COMPANY, addr1, city, state, zip } = req.body;
 
   if (!email_address || !email_address.length) {
     return res.status(400).json({
@@ -67,7 +68,7 @@ const Newsletter = async (req, res) => {
   }
 
   try {
-    const { url, data, headers } = getRequestParams(email_address, FNAME, LNAME, PHONE, addr1, city, state, zip);
+    const { url, data, headers } = getRequestParams(email_address, FNAME, LNAME, PHONE, COMPANY, addr1, city, state, zip);
 
     const response = await axios.post(url, data, { headers });
 
