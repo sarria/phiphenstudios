@@ -8,6 +8,7 @@ import Images from './Images'
 import Carousel from './Carousel'
 import Announcements from './Announcements'
 import Video from './Video'
+import Contact from './Contact'
 
 function PageContent({page, global}) {
 	// const {navigation} = global;
@@ -43,7 +44,10 @@ function PageContent({page, global}) {
 						break;
 					case 'video':
 						ele = <Video data={module} />
-						break;			
+						break;
+					case 'contact':
+						ele = <Contact data={module} />
+						break;
 					default:
 						// code block
 				}
