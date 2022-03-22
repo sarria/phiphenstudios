@@ -18,13 +18,14 @@ const Image_text = ({data}) => {
 								<div className={`ratio_container ${styles.ratio_container}`}>
 									<div className={`outer ${styles.image_ratio}`}>
 										<div className={`inner ${styles.inner}`}>
+											{item.image && 
 											<Image
 												alt={item.image.altText}
 												src={item.image.sourceUrl}
 												layout="fill"
 												objectFit="cover"
 												objectPosition="top center"
-											/>											
+											/>}
 										</div>
 									</div>
 								</div>
