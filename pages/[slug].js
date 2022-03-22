@@ -11,7 +11,7 @@ function Page({ global, page }) {
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps(context) {
-  const res = await fetch(process.env.API + queryContent(context.params.slug))
+  const res = await fetch(process.env.GRAPHQL + queryContent(context.params.slug))
   const data = await res.json()
   const global = data.data?.acfOptionsGlobalOptions?.global
   const content = data.data?.content?.edges[0]?.node
@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
 // It may be called again, on a serverless function, if
 // the path has not been generated.
 export async function getStaticPaths() {
-  const res = await fetch(process.env.API + queryPaths())
+  const res = await fetch(process.env.GRAPHQL + queryPaths())
   const data = await res.json()
 
   // Get the paths we want to pre-render based on data
