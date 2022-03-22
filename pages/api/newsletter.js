@@ -59,10 +59,16 @@ const Newsletter = async (req, res) => {
     });
   }
 
+  if (!COMPANY || !COMPANY.length) {
+    return res.status(400).json({
+      error: "Forgot to add your company?",
+    });
+  }
+  
   if (addr1 || city || state || zip) {
     if (!addr1 || !city || !state || !zip) {
       return res.status(400).json({
-        error: "If entering your address, please don't forget to enter all fields",
+        error: "If adding your address, please don't forget to enter all fields",
       });
     }
   }

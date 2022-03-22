@@ -72,7 +72,7 @@ const Contact = ({data}) => {
 						/>
 					</div>
 					<div className={styles.field}>
-						<div>Company</div>
+						<div>Company *</div>
 						<input
 							className=""
 							type="text"
