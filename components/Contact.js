@@ -1,19 +1,3 @@
-import styles from './styles/contact.module.scss';
-
-const Contact = ({data}) => {
-
-	return (
-		<div className={styles.root}>
-			<div className={styles.wrapper}>
-				Contact Module Content
-			</div>
-		</div>
-	)
-}
-
-export default Contact;
-
-/*
 import { useState } from "react";
 import axios from "axios";
 import styles from './styles/contact.module.scss';
@@ -164,5 +148,3 @@ const Contact = ({data}) => {
   };
 
 export default Contact;
-
-*/

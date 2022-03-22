@@ -112,3 +112,10 @@ li::marker {
   }  
 }
 
+button {
+  background-color: $BUTTON-COLOR;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  font-size: 18px;
+}
