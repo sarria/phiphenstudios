@@ -50,7 +50,7 @@ function PageContent({page, global}) {
 				
 				return (
 					<div key={idx}>
-						{ele}
+						<b>{ele}</b>
 					</div>
 				)
 			})}
