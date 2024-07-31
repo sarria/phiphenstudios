@@ -5,7 +5,7 @@ import Quote from "./Quote"
 import Link from 'next/link'
 import classNames from 'classnames/bind'
 import styles from './styles/hero.module.scss'
-import logo from '../public/PSLogo.png'
+import logo from '../public/Phiphen-Post-Logo-Full-Color-Lg.png'
 import decoration from '../public/decoration.png'
 import mask from '../public/mask.png'
 import Script from 'next/script'
